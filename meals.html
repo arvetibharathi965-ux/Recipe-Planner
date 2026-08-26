@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe & Meal Planner</title>
+    <link rel="stylesheet" href="meals.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🍴 Recipe Planner</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#planner">Meal Planner</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <h1>Plan Your Meals Easily 🍽️</h1>
+        <p>Discover delicious recipes and plan your weekly meals.</p>
+
+        <a href="#recipes" class="btn">Explore Recipes</a>
+    </div>
+</section>
+
+<section class="recipes" id="recipes">
+
+    <h2>🍳 Popular Recipes</h2>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search recipes..."
+            onkeyup="searchRecipes()"
+        >
+    </div>
+
+    <div class="recipe-container" id="recipeContainer">
+
+        <div class="recipe-card">
+            <div class="recipe-image">🍝</div>
+            <h3>Veg Pasta</h3>
+            <p>Delicious vegetable pasta.</p>
+            <span>⏱ 25 min</span>
+            <button onclick="addToPlanner('Veg Pasta')">
+                Add to Planner
+            </button>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-image">🍛</div>
+            <h3>Vegetable Rice</h3>
+            <p>Healthy and tasty vegetable rice.</p>
+            <span>⏱ 30 min</span>
+            <button onclick="addToPlanner('Vegetable Rice')">
+                Add to Planner
+            </button>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-image">🥗</div>
+            <h3>Healthy Salad</h3>
+            <p>Fresh and healthy vegetable salad.</p>
+            <span>⏱ 15 min</span>
+            <button onclick="addToPlanner('Healthy Salad')">
+                Add to Planner
+            </button>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-image">🥞</div>
+            <h3>Breakfast Pancakes</h3>
+            <p>Easy and delicious pancakes.</p>
+            <span>⏱ 20 min</span>
+            <button onclick="addToPlanner('Breakfast Pancakes')">
+                Add to Planner
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section class="planner" id="planner">
+
+    <h2>📅 Weekly Meal Planner</h2>
+
+    <div class="week">
+
+        <div class="day">
+            <h3>Monday</h3>
+            <p id="monday">No meal selected</p>
+            <button onclick="selectMeal('monday')">Select</button>
+        </div>
+
+        <div class="day">
+            <h3>Tuesday</h3>
+            <p id="tuesday">No meal selected</p>
+            <button onclick="selectMeal('tuesday')">Select</button>
+        </div>
+
+        <div class="day">
+            <h3>Wednesday</h3>
+            <p id="wednesday">No meal selected</p>
+            <button onclick="selectMeal('wednesday')">Select</button>
+        </div>
+
+        <div class="day">
+            <h3>Thursday</h3>
+            <p id="thursday">No meal selected</p>
+            <button onclick="selectMeal('thursday')">Select</button>
+        </div>
+
+        <div class="day">
+            <h3>Friday</h3>
+            <p id="friday">No meal selected</p>
+            <button onclick="selectMeal('friday')">Select</button>
+        </div>
+
+        <div class="day">
+            <h3>Saturday</h3>
+            <p id="saturday">No meal selected</p>
+            <button onclick="selectMeal('saturday')">Select</button>
+        </div>
+
+        <div class="day">
+            <h3>Sunday</h3>
+            <p id="sunday">No meal selected</p>
+            <button onclick="selectMeal('sunday')">Select</button>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Recipe & Meal Planner</p>
+</footer>
+
+<script src="meals.js"></script>
+
+</body>
+</html>
